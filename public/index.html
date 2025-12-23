@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo's Pizza - Gourmet Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="glass-card" style="text-align: center;">
+            <h1><i class="fas fa-pizza-slice"></i> Paulo's Pizza</h1>
+            <p style="color: var(--text-muted)">Welcome to Paulo's! Best pizza in town. Try our AI Waiter!</p>
+            <a href="admin.html" style="color: var(--primary); text-decoration: none; font-size: 0.8em;">[Admin
+                Login]</a>
+        </header>
+
+        <section id="menu-section">
+            <h2>Our Menu</h2>
+            <div id="menu-grid" class="menu-grid">
+                <!-- Loaded via JS -->
+                <p style="text-align:center; width:100%;">Loading delightful dishes...</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="order-modal" class="modal hidden">
+        <div class="glass-card modal-content">
+            <h2 id="modal-item-name">Item Name</h2>
+            <img id="modal-item-img" src="" alt="Food"
+                style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <span style="font-size: 1.2em;">Price:</span>
+                <span id="modal-item-price"
+                    style="font-size: 1.5em; color: var(--primary); font-weight: bold;">$0.00</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn" style="flex: 1; background: #333; color: white;"
+                    onclick="closeModal()">Cancel</button>
+                <button class="btn" style="flex: 1;" onclick="confirmOrder()">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="modal hidden">
+        <div class="glass-card modal-content" style="text-align: center;">
+            <i class="fas fa-check-circle" style="font-size: 4em; color: #4CAF50; margin-bottom: 20px;"></i>
+            <h2>Order Placed!</h2>
+            <p>Thank you for dining with us.</p>
+            <p style="color: grey; font-size: 0.9em;">Order ID: <span id="success-order-id">#</span></p>
+            <button class="btn" onclick="closeSuccess()">Awesome!</button>
+        </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-interface" class="glass-card hidden" style="padding: 0; width: 350px; height: 500px;">
+        <div class="chat-header">
+            Paulo (Your Friendly Waiter)
+            <i class="fas fa-times" style="float: right; cursor: pointer;" onclick="toggleChat()"></i>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="msg bot">Hi there! Welcome to Paulo’s Pizza! 🍕 What can I get started for you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Type here..." onkeypress="handleEnter(event)">
+            <button class="btn" onclick="sendMessage()" style="margin-left: 5px; padding: 5px 15px;"><i
+                    class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="customer.js"></script>
+</body>
+
+</html>

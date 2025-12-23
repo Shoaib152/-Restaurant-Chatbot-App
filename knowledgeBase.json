@@ -1,0 +1,38 @@
+[
+    {
+        "keywords": [
+            "pizza",
+            "margherita"
+        ],
+        "answer": "Our Margherita Pizza is a classic Neapolitan style with San Marzano tomato sauce, fresh buffalo mozzarella, and basil."
+    },
+    {
+        "keywords": [
+            "pepperoni",
+            "spicy"
+        ],
+        "answer": "The Pepperoni Pizza is a crowd favorite, featuring our house-made spicy pepperoni and melted mozzarella."
+    },
+    {
+        "keywords": [
+            "salad",
+            "caesar"
+        ],
+        "answer": "The Caesar Salad is fresh with crisp romaine, shaved parmesan, and garlic buttery croutons."
+    },
+    {
+        "keywords": [
+            "hours",
+            "open"
+        ],
+        "answer": "We are open from 11 AM to 10 PM daily."
+    },
+    {
+        "keywords": [
+            "payment",
+            "card",
+            "cash"
+        ],
+        "answer": "We accept all major credit cards, Apple Pay, and cash."
+    }
+]
